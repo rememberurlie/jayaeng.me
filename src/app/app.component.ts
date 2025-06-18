@@ -6,10 +6,10 @@ import { Component} from '@angular/core';
   styleUrl: './app.component.css'
 })
 
-export class AppComponent{
+export class AppComponent{ 
+
   birthDate: Date = new Date('2001-08-31T14:29:00');  // Replace with the actual birth date
   realTimeAge: string = '';
-  private intervalId: any;
 
   constructor() {
     this.calculateRealTimeAge();
@@ -27,7 +27,7 @@ export class AppComponent{
       const minutes = now.getMinutes();
       const seconds = now.getSeconds();
       
-      this.realTimeAge = `${years} years, ${months} months, ${days} days`;
+      this.realTimeAge = `${years} years, ${months} months, ${days} days, ${hours}:${minutes}:${seconds}`;
 
   }
 
