@@ -1,16 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
-
-body{
-    margin: 40px 20% 40px 20%;
-    font-family: "Reddit Sans", sans-serif;
-    background-image: url("https://img2.pic.in.th/pic/seamless-pattern-of-funny-colorful-doodle-lines-a-creative-artistic-background-in-a-minimalist-style-for-children-or-a-fashionable-design-with-basic-shapes-memphis-style-vector.png");
-}
-
-@media screen and (max-width: 800px) {
-    body {
-        margin: 40px 8% 40px 8%;
-    }
-}
+/*
 
 .card#edu {
     height: 315px;
@@ -19,11 +7,25 @@ body{
     height: 315px;
 }
 
+.card#contact {
+    height: 175px;
+}
+.card#experience {
+    height: 175px;
+}
+
+
 @media screen and (max-width: 1054px) {
     .card#edu {
         height: 337px;
     }
     .card#skill {
+        height: 337px;
+    }
+     .card#contact {
+        height: 337px;
+    }
+    .card#experience {
         height: 337px;
     }
 }
@@ -35,6 +37,12 @@ body{
     .card#skill {
         height: 360px;
     }
+    .card#contact {
+        height: 360px;
+    }
+    .card#experience {
+        height: 360px;
+    }
 }
 
 @media screen and (max-width: 932px) {
@@ -42,6 +50,12 @@ body{
         height: 382px;
     }
     .card#skill {
+        height: 382px;
+    }
+    .card#contact {
+        height: 382px;
+    }
+    .card#experience {
         height: 382px;
     }
 }
@@ -53,6 +67,12 @@ body{
     .card#skill {
         height: 403px;
     }
+    .card#contact {
+        height: 403px;
+    }
+    .card#experience {
+        height: 403px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -60,6 +80,12 @@ body{
         height: 335px;
     }
     .card#skill {
+        height: 335px;
+    }
+    .card#contact {
+        height: 335px;
+    }
+    .card#experience {
         height: 335px;
     }
 }
@@ -71,6 +97,12 @@ body{
     .card#skill {
         height: 360px;
     }
+    .card#contact {
+        height: 360px;
+    }
+    .card#experience {
+        height: 360px;
+    }
 }
 
 @media screen and (max-width: 671px) {
@@ -80,6 +112,12 @@ body{
     .card#skill {
         height: 380px;
     }
+    .card#contact {
+        height: 380px;
+    }
+    .card#experience {
+        height: 380px;
+    } 
 }
 
 @media screen and (max-width: 664px) {
@@ -87,6 +125,12 @@ body{
         height: 403px;
     }
     .card#skill {
+        height: 403px;
+    }
+    .card#contact {
+        height: 403px;
+    }
+    .card#experience {
         height: 403px;
     }
 }
@@ -98,7 +142,15 @@ body{
     .card#skill {
         height: auto;
     }
+    .card#contact {
+        height: auto;
+    }
+    .card#experience {
+        height: auto;
+    }
 }
+
+*/
 
 .card {
     margin: 0 auto;
@@ -107,16 +159,17 @@ body{
     border-radius: 20px;
     border-color: rgb(255, 255, 255);
     box-shadow: 0 0 20px 1px #dadada;
+
     
 }
 
 .card-text#name{
-    margin-top: 8px;
+    margin-top: 0px;
 }
 
 img#rectangle{
     float: left;
-    width: 5rem;
+    height: 5rem;
     border-radius: 20%;
     margin-right: 20px;
 }
@@ -137,7 +190,25 @@ img#rectangle{
 .card:hover {
     transform: scale(1.05);
     animation: gradientShadow 3s infinite alternate;
+}
+.card {
+transition: transform 0.2s;
+}
+
+#name-title {
+  font-size: 20px;
+}
+
+@media (min-width: 409px) { /* md and up */
+  #name-title {
+    font-size: 25px;
   }
-  .card {
-    transition: transform 0.2s;
-  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}

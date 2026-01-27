@@ -1,117 +1,137 @@
-<head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
-
   <div class="card-desk">
     <div class="card" id="name">
-         <div class="card-body">
-        <img  id="rectangle" src="https://img5.pic.in.th/file/secure-sv1/442503476_7647636881997870_8124978637895890768_n.jpg">
-        <div class="card-text" id="name">
-          <b style="font-size: 25px; ">Netipong Sanklar</b>
-          <div style="font-size: 15px; ">Sex: Male | Age: 23 years</div><br>
+      <div class="card-body">
+        <div>
+          <img id="rectangle" src="../assets/profile.jpg" alt="Profile Picture">
+          <b id="name-title">Netipong Sanklar</b>
+          <div style="font-size: 15px;">Sex: Male ♂️<br>Age: {{this.realTimeAge}}</div>
+        </div>
+        <div class="card-text" style="padding-top: 25px;" id="name">
 
-          <div style="font-size: 15px; padding-top: 5px;">
+          <div style="font-size: 15px; margin-top: -5px;">
 
-            <b>Please call me "Jay".</b><br>
-            I'm Computer-Technology student Luv'in Technology, IT Gadget and all about computer<br>
+            <b>Please call me "Jay"</b><br>
+            I'm Senior Computer-Technology student Luv'in Technology, IT Gadget and all about computer<br>
             I like to do photograph, cinematic, video editing as my hobby.
             </div>
+
         </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-sm-6">
-
-        <div class="card" id="edu">
+      <div class="col-12 col-md-6 d-flex align-items-stretch">
+        <div class="card w-100" id="edu">
           <div class="card-body">
             <div class="card-text">
               <div style="padding-bottom: 10px; font-size: 23px; color:rgb(255, 163, 226);">
                 <b>Educational background</b>
               </div>
-              <div style="font-size: 15px; padding-bottom: 5px;"><b>2022 - Now (Bachelor's degree)</b><br>
-              - Study in Faculty of Science-Technology<br> 
-              - Major of Computer-Technology (Database) at Rajamangala University of Technology Thanyaburi. (Current GPAX 3.9)</div>
-              <div style="font-size: 15px;"><b>2014 - 2020 (Grade 7 - Grade 12)</b><br>
-                At Thanyaburi School</div>
+              <div style="font-size: 15px; padding-bottom: 15px;"><b>2022 - Now (Bachelor's degree) </b><br>
+              🔸 Study in Faculty of Science-Technology<br> 
+              🔸 Major of Computer-Technology (Database) at Rajamangala University of Technology Thanyaburi. (Current GPAX 3.9)</div>
+              <div style="font-size: 15px; padding-bottom: 15px;"><b>2014 - 2020 (Grade 7 - Grade 12)</b><br>
+                🔸At Thanyaburi School (Sci-Math Program in Grade 10 - Grade 12)
+              </div>
+              <div style="font-size: 15px;"><b>2005 - 2013 (Kindergarten - Grade 6)</b><br>
+                🔸At Rabeibwittaya School
+              </div>
             </div>
           </div>
         </div>
-
       </div>
-      <div class="col-sm-6">
 
-        <div class="card" id="skill">
+      <div class="col-12 col-md-6 d-flex align-items-stretch">
+        <div class="card w-100" id="skill">
           <div class="card-body">
             <div class="card-text">
               <div style="padding-bottom: 10px; font-size: 23px; color:rgb(252, 206, 0);">
                 <b>Skills</b>
               </div>
-              <div style="font-size: 15px; padding-bottom: 5px;"><b>Programming Languages</b><br>
-              - HTML / CSS / Bootstrap<br>
-              - Javascript / Express Framework<br>
-              - Typescript / Angular Framework<br>
-              - C#<br>
+              <div style="font-size: 15px; padding-bottom: 15px;"><b>Programming Stacks</b><br>
+              🔸 HTML / CSS / Bootstrap<br>
+              🔸 API : Express.js ,Next.js<br>
+              🔸 Frontend : Angular, React.js<br>
+              🔸 Database : MySQL, Firebase, PostGreSQL (CLI)<br>
+              🔸 OS Admin : Windows, Linux (Ubuntu) (UI & CLI)<br>
               </div>
-              <div style="font-size: 15px; "><b>Tools</b><br>
-              - Github Desktop<br>
-              - Canvas<br>
-              - Adobe Photoshop<br>
-              - UNIX CLI<br>
+              <div style="font-size: 15px; "><b>Other Skills (included hobby)</b><br>
+              🎥 Video Editing : Adobe Premiere Pro, Capcut <br>
+              📷 Photography : Adobe Lightroom, Adobe Photoshop<br>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
+    <div class="row" >
+      <div class="col-12 col-md-6 d-flex align-items-stretch">
+        <div class="card w-100" id="experience">
+          <div class="card-body">
+            <div class="card-text">
+              <div style="padding-bottom: 10px; font-size: 23px; color:rgb(155, 94, 255);">
+                <b>Work Experience</b>
+              </div>
+              <div style="font-size: 15px; padding-bottom: 5px;"><b>Internship (July 2025 - October 2025) </b><br>
+                 🔸Frontend Developer Intern at Things Analytic Co., Ltd.<br>
+              </div>
+              <div style="font-size: 15px; padding-bottom: 5px;"><b>Side job</b><br>
+                🔸Phone Leasing and Ticket Reservation at <a href="https://x.com/dede_ja555"><img style="height:25px; padding-bottom: 3px;" src="../assets/x.png"></a><br>
+                🔸Assistant Electrical Engineer at IBS Engineering Co., Ltd.<br>
+                🔸Computer repair and consultation.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-stretch">
+        <div class="card w-100" id="contact">
+          <div class="card-body">
+            <div class="card-text">
+              <div style="padding-bottom: 10px; font-size: 23px; color:rgb(0, 204, 255);">
+                <b>Contact</b>
+              </div>
+              <div style="font-size: 15px; padding-bottom: 7px;"><img style="height:11px; padding-right: 6px; margin-bottom: 2px;"src="../assets/gmail.png"><b>Email</b><br>
+                <a href="mailto:netipong.jj@gmail.com">netipong.jj&#64;gmail.com</a>
+              </div>
+              <div style="font-size: 15px; padding-bottom: 7px;"><img style="height:11px; padding-right: 5px; margin-bottom: 2px;" src="../assets/discord.png"><b>Discord</b><br>
+                <a href="https://discordapp.com/users/161111988141817857">rememberurlie</a>
+              </div>
+              <div style="font-size: 15px; "><img style="height:13px; padding-right: 5px; margin-bottom: 2px;" src="../assets/ig.png"><b>Instagram</b><br>
+                <a href="https://www.instagram.com/174eng_">174eng_</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="card" id="work">
       <div class="card-body">
         <div class="card-text">
-          <div style="padding-bottom: 10px; font-size: 23px; color:rgb(255, 160, 83);">
+          <div style="padding-bottom: 15px; font-size: 23px; color:rgb(255, 160, 83);">
             <b>History Projects</b>
           </div>
-          <div style="font-size: 15px; padding-bottom: 5px;"><b>1Thing | Social Media Website</b><br>
-            -	Used Angular Framework for development and Google Firebase for the database.<br>
-            -	Designed with a minimalist concept, incorporating unique UI elements compared to popular social media platforms.<br>
-            -	Features include essential social media functionality: account system (using Firebase Authentication), feed system (post, like, comment).<br>
+          <div style="font-size: 15px; padding-bottom: 15px;"><b>1Thing | Social Media Website (2023-2024)</b><a href="https://github.com/rememberurlie/1Thing" target="_blank" rel="noopener noreferrer">  ↗️</a><br>
+            🔸	Used Angular Framework for development and Google Firebase for the database.<br>
+            🔸	Designed with a minimalist concept, incorporating unique UI elements compared to popular social media platforms.<br>
+            🔸	Features include essential social media functionality: account system (using Firebase Authentication), feed system (post, like, comment).<br>
           </div>
-          <div style="font-size: 15px; "><b>Namnuea Feed Store | E-Commerce Website</b><br>
-            -	Developed using Express.js and MySQL (local database with phpMyAdmin).<br>
-            -	Focused on front-end development, with UI designs provided by a collaborator.<br>
-            -	Features include account system, shopping cart, checkout for regular users, and management tools for items and orders for super users.
+          <div style="font-size: 15px; padding-bottom: 15px;"><b>Namnuea Feed Store | E-Commerce Website (2024)</b><a href="https://github.com/rememberurlie/namnuea_feedstore" target="_blank" rel="noopener noreferrer">  ↗️</a><br>
+            🔸	Focused on front-end development, with UI designs provided by a collaborator.<br>
+            🔸	Features include account system, shopping cart, checkout for regular users, and management tools for items and orders for super users.
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" id="contact">
-      <div class="card-body">
-        <div class="card-text">
-          <div style="padding-bottom: 10px; font-size: 23px; color:rgb(0, 204, 255);">
-            <b>Contact</b>
+          <div style="font-size: 15px; padding-bottom: 15px;"><b>Thingspad (2025)</b><a href="https://github.com/rememberurlie/thingspad" target="_blank" rel="noopener noreferrer">  ↗️</a><br>
+            🔸	Webchat and Task Management for organization<br>
+            🔸 It's can make private chats, create chat rooms for any projects and built in task management<br>
+            🔸 Tech stack : React.js (Frontend), Firebase (Authentication, Firestore), Next.js (Next.js)<br>
           </div>
-          <div style="font-size: 15px; padding-bottom: 5px;"><b>Email</b><img style="height:13px; padding-left: 5px; padding-bottom: 2px;"src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"><br>
-            <a href="mailto:netipong.jj@gmail.com">netipong.jj&#64;gmail.com</a></div>
-          <div style="font-size: 15px; "><b>Discord</b><img style="height:13px; padding-left: 5px; padding-bottom: 2px;"src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png"><br>
-            <a href="https://discordapp.com/users/161111988141817857">rememberurlie</a></div>
+          <div style="font-size: 15px; padding-bottom: 5px;"><b>Hand Gesture Controller in Windows using Web Camera (Working)</b><br>
+            🔸 Control Mouse and Windows Feature with hand gestures using a web camera.<br>
+            🔸 Used Python for development, Mediapipe Library for marking hand skeleton and collect as dataset, bring to train with TensorFlow and get model to use for mapping key with Windows Feature (Change Dasktop, Media Controller)<br>
+          </div>
         </div>
       </div>
     </div>
   </div>
-<body>
-
-<script>
-  function adjustHeight() {
-    const eduCard = document.querySelector('.card#edu');
-    const skillCard = document.querySelector('.card#skill');
-
-    if (window.innerWidth <= 1054) {
-        skillCard.style.height = (eduCard.offsetHeight + 200) + 'px';
-    } else {
-        skillCard.style.height = 'auto'; // กลับสู่ค่าปกติถ้าหน้าจอใหญ่กว่า
-    }
-}
-</script>
