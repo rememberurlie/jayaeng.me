@@ -159,8 +159,8 @@
     border-radius: 20px;
     border-color: rgb(255, 255, 255);
     box-shadow: 0 0 20px 1px #dadada;
-
-    
+    background-color: rgb(255, 255, 255);
+    color: #000000
 }
 
 .card-text#name{
@@ -169,7 +169,7 @@
 
 img#rectangle{
     float: left;
-    height: 5rem;
+    height: 5.1rem;
     border-radius: 20%;
     margin-right: 20px;
 }
