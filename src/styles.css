@@ -6,7 +6,7 @@ body{
     background-image: url("https://img2.pic.in.th/pic/seamless-pattern-of-funny-colorful-doodle-lines-a-creative-artistic-background-in-a-minimalist-style-for-children-or-a-fashionable-design-with-basic-shapes-memphis-style-vector.png");
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
     body {
         margin: 40px 8% 40px 8%;
     }
