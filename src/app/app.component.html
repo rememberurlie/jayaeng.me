@@ -1,25 +1,33 @@
-  <div class="card-desk">
+<div class="card-desk" [class.dark-theme]="isDarkMode">
+    
+    <!-- Add this button block at the very top -->
+    <!-- <div style="text-align: right;">
+        <button class="btn btn-sm" (click)="toggleTheme()" 
+                [ngClass]="isDarkMode ? 'btn-light' : 'btn-dark'">
+          {{ isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode' }}
+        </button>
+    </div> -->
+
     <div class="card" id="name">
       <div class="card-body">
-        <div>
+        <div style="display: flex; align-items: center;">
+
           <img id="rectangle" src="assets/profile.jpg" alt="Profile Picture">
-          <b id="name-title">Netipong Sanklar
-            </b>
-          <div style="font-size: 15px;">Sex: Male ♂️ <br> Age: {{this.realTimeAge}}</div>
+
+          <div class="profile-info">
+            <b id="name-title">Netipong Sanklar</b>
+            <div class="card-text" style="font-size: 15px;">Sex: Male ♂️ <br> Age: {{this.realTimeAge}}</div>
+          </div>
+
         </div>
-        <div class="card-text" style="padding-top: 25px;" id="name">
 
-          <div style="font-size: 15px; margin-top: -12px;">
-
+        <div class="card-text" style="font-size: 15px; margin-top: 20px;" id="name">
             <b>Please call me "Jay"</b>
-            <a href="https://www.linkedin.com/in/netipong-sanklar-05930231a/"><img style="height:19px; margin: 0px 3px 6px 6px; border-radius: 20%;" src="assets/linkedin.webp"></a>
-            <a href="https://github.com/rememberurlie"><img style="height:19px; margin: 0px 3px 6px 3px; border-radius: 20%;" src="assets/github.webp"></a>
+            <a href="https://www.linkedin.com/in/netipong-sanklar-05930231a/" target="_blank" rel="noopener noreferrer"><img id="scn-logo" style="height:19px; margin: 0px 3px 6px 6px; border-radius: 20%;" src="assets/linkedin.webp"></a>
+            <a href="https://github.com/rememberurlie" target="_blank" rel="noopener noreferrer"><img id="scn-logo" style="height:19px; margin: 0px 3px 6px 3px; border-radius: 20%;" src="assets/github.webp"></a>
             <br>
             I'm Senior Computer-Technology student Luv'in Technology, IT Gadget and all about computer<br>
             I like to do photograph, cinematic, video editing as my hobby.<br>
-            
-            </div>
-
         </div>
       </div>
     </div>
@@ -28,10 +36,10 @@
       <div class="col-12 col-md-6 d-flex align-items-stretch">
         <div class="card w-100" id="edu">
           <div class="card-body">
-            <div class="card-text">
-              <div style="padding-bottom: 10px; font-size: 23px; color:rgb(255, 163, 226);">
+              <div class="card-topic" style="color:rgb(255, 163, 226);">
                 <b>Educational background</b>
               </div>
+            <div class="card-text">
               <div style="font-size: 15px; padding-bottom: 15px;"><b>2022 - Now (Bachelor's degree) </b><br>
               🔸 Study in Faculty of Science-Technology<br> 
               🔸 Major of Computer-Technology (Database) at Rajamangala University of Technology Thanyaburi. (Current GPAX 3.9)</div>
@@ -49,11 +57,11 @@
       <div class="col-12 col-md-6 d-flex align-items-stretch">
         <div class="card w-100" id="skill">
           <div class="card-body">
-            <div class="card-text">
-              <div style="padding-bottom: 10px; font-size: 23px; color:rgb(252, 206, 0);">
+              <div class="card-topic" style="color:rgb(252, 206, 0);">
                 <b>Skills</b>
               </div>
-              <div style="font-size: 15px; padding-bottom: 15px;"><b>Programming Stacks</b><br>
+            <div class="card-text">
+              <div style="font-size: 15px; padding-bottom: 15px;"><b>Programming</b><br>
               🔸 HTML / CSS / Bootstrap<br>
               🔸 API : Express.js, Next.js<br>
               🔸 Frontend : Angular, React.js<br>
@@ -74,15 +82,15 @@
       <div class="col-12 col-md-6 d-flex align-items-stretch">
         <div class="card w-100" id="experience">
           <div class="card-body">
-            <div class="card-text">
-              <div style="padding-bottom: 10px; font-size: 23px; color:rgb(155, 94, 255);">
+              <div class="card-topic" style="color:rgb(155, 94, 255);">
                 <b>Work Experience</b>
               </div>
+            <div class="card-text">
               <div style="font-size: 15px; padding-bottom: 15px;"><b>Internship (July 2025 - October 2025) </b><br>
                  🔸Frontend Developer Intern at Things Analytic Co., Ltd.<br>
               </div>
               <div style="font-size: 15px; padding-bottom: 5px;"><b>Side job</b><br>
-                🔸Phone Leasing and Ticket Reservation at <a href="https://x.com/dede_ja555"><img style="height:25px; padding-bottom: 3px;" src="assets/x.png"></a><br>
+                🔸Phone Leasing and Ticket Reservation at <a href="https://x.com/dede_ja555" target="_blank" rel="noopener noreferrer"><img id="scn-logo" style="height:30px; padding-bottom: 3px; margin-left: -2px;" src="assets/x.png"></a><br>
                 🔸Assistant Electrical Engineer at IBS Engineering Co., Ltd.<br>
                 🔸Computer repair and consultation.
               </div>
@@ -93,18 +101,18 @@
       <div class="col-12 col-md-6 d-flex align-items-stretch">
         <div class="card w-100" id="contact">
           <div class="card-body">
-            <div class="card-text">
-              <div style="padding-bottom: 10px; font-size: 23px; color:rgb(0, 204, 255);">
+            <div class="card-topic" style="color:rgb(0, 204, 255);">
                 <b>Contact</b>
               </div>
+            <div class="card-text">
               <div style="font-size: 15px; padding-bottom: 7px;"><img style="height:11px; padding-right: 6px; margin-bottom: 2px;"src="assets/gmail.png"><b>Email</b><br>
-                <a href="mailto:netipong.jj@gmail.com">netipong.jj&#64;gmail.com</a>
+                <a href="mailto:netipong.jj@gmail.com" target="_blank" rel="noopener noreferrer">netipong.jj&#64;gmail.com</a>
               </div>
               <div style="font-size: 15px; padding-bottom: 7px;"><img style="height:11px; padding-right: 5px; margin-bottom: 2px;" src="assets/discord.png"><b>Discord</b><br>
-                <a href="https://discordapp.com/users/161111988141817857">rememberurlie</a>
+                <a href="https://discordapp.com/users/161111988141817857" target="_blank" rel="noopener noreferrer">rememberurlie</a>
               </div>
               <div style="font-size: 15px; "><img style="height:14px; padding-right: 5px; margin-bottom: 2.5px;" src="assets/ig.png"><b>Instagram</b><br>
-                <a href="https://www.instagram.com/174eng_">174eng_</a>
+                <a href="https://www.instagram.com/174eng_" target="_blank" rel="noopener noreferrer">174eng_</a>
               </div>
             </div>
           </div>
@@ -114,11 +122,11 @@
 
     <div class="card" id="work">
       <div class="card-body">
-        <div class="card-text">
-          <div style="padding-bottom: 15px; font-size: 23px; color:rgb(255, 160, 83);">
+        <div class="card-topic" style="color:rgb(255, 160, 83);">
             <b>History Projects</b>
-          </div>
-          <div style="font-size: 15px; padding-bottom: 15px;"><b>1Thing | Social Media Website (2023-2024)</b><a href="https://github.com/rememberurlie/1Thing" target="_blank" rel="noopener noreferrer">  ↗️</a><br>
+        </div>
+        <div class="card-text">
+          <div id="text" style="font-size: 15px; padding-bottom: 15px;"><b>1Thing | Social Media Website (2023-2024)</b><a href="https://github.com/rememberurlie/1Thing" target="_blank" rel="noopener noreferrer">  ↗️</a><br>
             🔸	Used Angular Framework for development and Google Firebase for the database.<br>
             🔸	Designed with a minimalist concept, incorporating unique UI elements compared to popular social media platforms.<br>
             🔸	Features include essential social media functionality: account system (using Firebase Authentication), feed system (post, like, comment).<br>

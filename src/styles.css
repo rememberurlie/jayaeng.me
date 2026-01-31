@@ -3,7 +3,14 @@
 body{
     margin: 40px 20% 40px 20%;
     font-family: "Reddit Sans", sans-serif;
-    background-image: url("https://img2.pic.in.th/pic/seamless-pattern-of-funny-colorful-doodle-lines-a-creative-artistic-background-in-a-minimalist-style-for-children-or-a-fashionable-design-with-basic-shapes-memphis-style-vector.png");
+    /* Use relative path so it works when deployed, or keep absolute if local only */
+    background-image: url("assets/wallpaper-light.png"); 
+    transition: background-image 0.3s ease-in-out; /* Optional smooth transition */
+}
+
+/* Add this rule for dark mode */
+body.dark-mode-body {
+    background-image: url("assets/wallpaper-dark.png");
 }
 
 @media screen and (max-width: 1080px) {

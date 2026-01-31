@@ -1,157 +1,3 @@
-/*
-
-.card#edu {
-    height: 315px;
-}
-.card#skill {
-    height: 315px;
-}
-
-.card#contact {
-    height: 175px;
-}
-.card#experience {
-    height: 175px;
-}
-
-
-@media screen and (max-width: 1054px) {
-    .card#edu {
-        height: 337px;
-    }
-    .card#skill {
-        height: 337px;
-    }
-     .card#contact {
-        height: 337px;
-    }
-    .card#experience {
-        height: 337px;
-    }
-}
-
-@media screen and (max-width: 966px) {
-    .card#edu {
-        height: 360px;
-    }
-    .card#skill {
-        height: 360px;
-    }
-    .card#contact {
-        height: 360px;
-    }
-    .card#experience {
-        height: 360px;
-    }
-}
-
-@media screen and (max-width: 932px) {
-    .card#edu {
-        height: 382px;
-    }
-    .card#skill {
-        height: 382px;
-    }
-    .card#contact {
-        height: 382px;
-    }
-    .card#experience {
-        height: 382px;
-    }
-}
-
-@media screen and (max-width: 924px) {
-    .card#edu {
-        height: 403px;
-    }
-    .card#skill {
-        height: 403px;
-    }
-    .card#contact {
-        height: 403px;
-    }
-    .card#experience {
-        height: 403px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .card#edu {
-        height: 335px;
-    }
-    .card#skill {
-        height: 335px;
-    }
-    .card#contact {
-        height: 335px;
-    }
-    .card#experience {
-        height: 335px;
-    }
-}
-
-@media screen and (max-width: 695px) {
-    .card#edu {
-        height: 360px;
-    }
-    .card#skill {
-        height: 360px;
-    }
-    .card#contact {
-        height: 360px;
-    }
-    .card#experience {
-        height: 360px;
-    }
-}
-
-@media screen and (max-width: 671px) {
-    .card#edu {
-        height: 380px;
-    }
-    .card#skill {
-        height: 380px;
-    }
-    .card#contact {
-        height: 380px;
-    }
-    .card#experience {
-        height: 380px;
-    } 
-}
-
-@media screen and (max-width: 664px) {
-    .card#edu {
-        height: 403px;
-    }
-    .card#skill {
-        height: 403px;
-    }
-    .card#contact {
-        height: 403px;
-    }
-    .card#experience {
-        height: 403px;
-    }
-}
-
-@media screen and (max-width: 575px) {
-    .card#edu {
-        height: auto;
-    }
-    .card#skill {
-        height: auto;
-    }
-    .card#contact {
-        height: auto;
-    }
-    .card#experience {
-        height: auto;
-    }
-}
-
-*/
-
 .card {
     margin: 0 auto;
     float: none;
@@ -163,15 +9,30 @@
     color: #000000
 }
 
-.card-text#name{
-    margin-top: 0px;
-}
-
 img#rectangle{
     float: left;
-    height: 5.1rem;
+    height: 7rem;
     border-radius: 20%;
     margin-right: 20px;
+    transition: transform 0.5s;
+    transition-delay: 0s;
+}
+
+img#rectangle:hover {
+    transition: transform 0.5s;
+    transition-delay: 0.6s;
+    transform: scale(2);
+}
+
+img#scn-logo {
+    transition: transform 0.3s;
+    transition-delay: 0s;
+}
+
+img#scn-logo:hover {
+    transition: transform 0.3s;
+    transition-delay: 0s;
+    transform: scale(1.5);
 }
 
 @keyframes gradientShadow {
@@ -192,7 +53,7 @@ img#rectangle{
     animation: gradientShadow 3s infinite alternate;
 }
 .card {
-transition: transform 0.2s;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s, border-color 0.3s, color 0.3s;
 }
 
 #name-title {
@@ -211,4 +72,37 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Use center if you want horizontal centering too */
+    height: 100%;
+}
+
+.card .card-body .card-topic {
+    padding-bottom: 10px; font-size: 23px; 
+}
+
+/* Dark Mode Styles */
+.dark-theme .card .card-body .card-text {
+    color: #d6d6d6;
+}
+
+.dark-theme .card{
+    background-color: #1a1a1a;
+    border-color: #33333300;
+    box-shadow: 0 0 20px 1px #181818;
+}
+
+/* Adjust links in dark mode for better visibility */
+.dark-theme .card a {
+    color: #8ab4f8; 
+}
+
+/* Adjust headings/bold text if needed */
+.dark-theme .card .card-body .profile-info {
+    color: #ffffff;
 }
