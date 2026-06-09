@@ -1,4 +1,4 @@
-import { Component, Renderer2, Inject, PLATFORM_ID } from '@angular/core'; // Import Renderer2
+import { Component, Renderer2, Inject, PLATFORM_ID, OnDestroy, NgZone } from '@angular/core'; // Import Renderer2
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -7,16 +7,32 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './app.component.css'
 })
 
-export class AppComponent{ 
+export class AppComponent implements OnDestroy {
 
   birthDate: Date = new Date('2001-08-31T14:29:00');
   realTimeAge: string = '';
-  isDarkMode: boolean = false; 
+  isDarkMode: boolean = false;
+  private ageTimer: any;
 
   // Inject Renderer2
-  constructor(private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: Object, private ngZone: NgZone) {
     this.calculateRealTimeAge();
-    this.checkTimeForDarkMode(); 
+    this.checkTimeForDarkMode();
+
+    // Tick every second in the browser (works on static hosts like GitHub Pages).
+    if (isPlatformBrowser(this.platformId)) {
+      this.ngZone.runOutsideAngular(() => {
+        this.ageTimer = setInterval(() => {
+          this.ngZone.run(() => this.calculateRealTimeAge());
+        }, 1000);
+      });
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.ageTimer) {
+      clearInterval(this.ageTimer);
+    }
   }
 
   checkTimeForDarkMode() {
@@ -50,17 +66,31 @@ export class AppComponent{
   calculateRealTimeAge() {
 
       const now = new Date();
-      const diff = now.getTime() - this.birthDate.getTime();
+      const birth = this.birthDate;
 
-      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-      const months = Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44));
-      const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
-      const hours = now.getHours().toFixed(0).padStart(2, '0');
-      const minutes = now.getMinutes().toFixed(0).padStart(2, '0');
-      const seconds = now.getSeconds();
-      
-      // this.realTimeAge = `${years} years, ${months} months, ${days} days, ${hours}:${minutes}:${seconds}`;
-      this.realTimeAge = `${years}.${months} years`;
+      // Calendar-aware years / months / days.
+      let years = now.getFullYear() - birth.getFullYear();
+      let months = now.getMonth() - birth.getMonth();
+      let days = now.getDate() - birth.getDate();
+      let hours = now.getHours() - birth.getHours();
+      let minutes = now.getMinutes() - birth.getMinutes();
+      let seconds = now.getSeconds() - birth.getSeconds();
+
+      if (seconds < 0) { seconds += 60; minutes--; }
+      if (minutes < 0) { minutes += 60; hours--; }
+      if (hours < 0) { hours += 24; days--; }
+      if (days < 0) {
+        // Borrow days from the previous month.
+        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+        days += prevMonth;
+        months--;
+      }
+      if (months < 0) { months += 12; years--; }
+
+      const pad = (n: number) => n.toString().padStart(2, '0');
+      this.realTimeAge =
+        `${years} years ${months} months ${days} days ` +
+        `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
   }
 
 }
