@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build -- --base-href /jayaeng.me/
+        run: npm run build -- --base-href /
 
       - name: Add SPA 404 fallback
         run: cp dist/jayaeng.me/browser/index.html dist/jayaeng.me/browser/404.html
